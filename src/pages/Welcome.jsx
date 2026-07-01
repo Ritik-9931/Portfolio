@@ -53,7 +53,7 @@ const Welcome = () => {
         })
       }
       onClick={() => navigate("/home")}
-      className="relative overflow-hidden min-h-screen min-w-screen bg-[radial-gradient(circle_at_center,#1e3a8a_0%,#0f172a_45%,#020617_100%)] text-white flex items-center justify-center"
+      className="relative overflow-hidden min-h-screen min-w-screen bg-[radial-gradient(circle_at_center,#1e3a8a_0%,#0f172a_45%,#020617_100%)] text-gray-800 flex items-center justify-center"
     >
       <img
         src={iron}
