@@ -16,7 +16,19 @@ const Welcome = () => {
     canvas.height = window.innerHeight;
 
     // Fill the canvas with black
-    ctx.fillStyle = "#000";
+    const gradient = ctx.createLinearGradient(
+      0,
+      0,
+      canvas.width,
+      canvas.height,
+    );
+
+    gradient.addColorStop(0, "#06b6d4");
+    gradient.addColorStop(0.5, "#8b5cf6");
+    gradient.addColorStop(1, "#ec4899");
+
+    ctx.fillStyle = gradient;
+    // ctx.fillStyle = "gray";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Erase instead of drawing
@@ -27,7 +39,7 @@ const Welcome = () => {
     const ctx = canvasRef.current.getContext("2d");
 
     ctx.beginPath();
-    ctx.arc(e.clientX, e.clientY, 60, 0, Math.PI * 2);
+    ctx.arc(e.clientX, e.clientY, 50, 0, Math.PI * 2);
     ctx.fill();
   };
 
